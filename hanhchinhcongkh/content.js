@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             appendSelect(element, pageSize);
         });
     } else if (action === "copy") {
-        const table = document.getElementsByClassName("widget-body")[0];
+        const table = document.getElementsByClassName("divTableHoSo")[0];
         let input = document.createElement("input");
         input.setAttribute("value", table.innerHTML);
         document.body.appendChild(input);
