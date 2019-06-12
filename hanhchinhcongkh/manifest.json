@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Hành chính công Khánh Hòa",
+    "description": "Công cụ hỗ trợ cho hệ thống Hành chính công Khánh Hòa.",
+    "version": "0.4",
+    "icons": {
+        "128": "icon-128x128.png"
+    },
+    "permissions": ["activeTab"],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "all_frames": true,
+            "js": ["content.js"]
+        }
+    ]
+}
