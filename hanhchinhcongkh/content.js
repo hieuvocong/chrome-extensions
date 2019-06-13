@@ -15,6 +15,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         });
     } else if (action === "copy") {
         const table = document.getElementsByClassName("divTableHoSo")[0];
+        table.querySelectorAll("i").forEach(element => element.click());
         let input = document.createElement("input");
         input.setAttribute("value", table.innerHTML);
         document.body.appendChild(input);
