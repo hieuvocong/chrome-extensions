@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    document.getElementById("copy-button").addEventListener("click", () => {
+    document.getElementById("extend-button").addEventListener("click", () => {
         const data = {
-            action: "copy"
+            action: "extend"
         };
         chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
             chrome.tabs.sendMessage(tabs[0].id, data);

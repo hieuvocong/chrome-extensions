@@ -13,14 +13,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         elements.forEach(element => {
             appendSelect(element, pageSize);
         });
-    } else if (action === "copy") {
+    } else if (action === "extend") {
         const table = document.getElementsByClassName("divTableHoSo")[0];
         table.querySelectorAll("i").forEach(element => element.click());
-        let input = document.createElement("input");
-        input.setAttribute("value", table.innerHTML);
-        document.body.appendChild(input);
-        input.select();
-        document.execCommand("copy");
-        document.removeChild(input);
     }
 });
